@@ -46,7 +46,7 @@
         <div id="footer" style="height: 15%;margin: 0;padding: 0;"></div>
     </footer>
 
-   <script>
+   <!-- <script>
     $(document).ready(function(){
             $("#content").addClass("hide-content");
             $("#loading").show();
@@ -74,6 +74,33 @@
                 $('#contacts').load('/html/contact.html'),
                 $('#loading').load('/html/loading.html')
             ).done(function() {
+                setTimeout(function() {
+                    $("#loading").hide();
+                    $("#content").removeClass("hide-content");
+                }, 2000);
+            });
+
+            $('a').on('click', function() {
+                $("#content").addClass("hide-content");
+                $("#loading").show();
+            });
+        });
+   </script> -->
+
+   <script>
+    $(document).ready(function(){
+            $('#header').load('/header-footer/header.html')
+            $('#sidebar-container').load('sidebar.html')
+            $('#footer').load("/header-footer/footer.html")
+            $('#contacts').load('/html/contact.html')
+            $('#loading').load('/html/loading.html')
+
+            $(document).ajaxStart(function() {
+                $("#content").addClass("hide-content");
+                $("#loading").show();
+            });
+
+            $(document).ajaxComplete(function() {
                 setTimeout(function() {
                     $("#loading").hide();
                     $("#content").removeClass("hide-content");
