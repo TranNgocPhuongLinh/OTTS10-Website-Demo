@@ -92,11 +92,11 @@
 
     <script>
         $(document).ready(function(){
-            $('#header').load('/header-footer/header.html')
+            $('#header').load('../header-footer/header.html')
             $('#sidebar-container').load('sidebar.html')
-            $('#footer').load("/header-footer/footer.html")
-            $('#contacts').load('/html/contact.html')
-            $('#loading').load('/html/loading.html')
+            $('#footer').load("../header-footer/footer.html")
+            $('#contacts').load('../html/contact.html')
+            $('#loading').load('../html/loading.html')
 
             $(document).ajaxStart(function() {
                 $("#content").addClass("hide-content");
