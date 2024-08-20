@@ -1,13 +1,13 @@
-$(function(){
+$(document).ready(function(){
     $("#content").addClass("hide-content");
     $("#loading").show();
 
     $('#header').load('/header-footer/header.html', function() {
         // callback function
     });
-    // $('#sidebar-container').load('sidebar.html', function() {
-        
-    // });
+    $('#sidebar-container').load('sidebar.html', function() {
+        // callback function
+    });
     $('#footer').load("/header-footer/footer.html", function() {
         // callback function
     });
@@ -20,7 +20,7 @@ $(function(){
 
     $.when(
         $('#header').load('/header-footer/header.html'),
-        // $('#sidebar-container').load('sidebar.html'),
+        $('#sidebar-container').load('sidebar.html'),
         $('#footer').load("/header-footer/footer.html"),
         $('#contacts').load('/html/contact.html'),
         $('#loading').load('/html/loading.html')
@@ -28,7 +28,7 @@ $(function(){
         setTimeout(function() {
             $("#loading").hide();
             $("#content").removeClass("hide-content");
-        }, 1000);
+        }, 2000);
     });
 
     $('a').on('click', function() {
