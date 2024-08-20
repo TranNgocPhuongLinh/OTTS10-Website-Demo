@@ -4,7 +4,8 @@ body{
 }
 
 #news{
-    margin: 20px 0 10px 0;
+    margin: 20px auto 10px auto;
+    width: 95%;
     border-radius: 5px;
     box-shadow: 0 0 5px silver;
     position: relative;
