@@ -10,7 +10,14 @@
         <!-- <link rel="stylesheet" type="text/css" href="../css/contact.css"> -->
 
         <style>
-          .spinner-border{
+          /* .spinner-border{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            translate: (-50px, -50px);
+          } */
+
+          l-bouncy{
             position: relative;
             top: 50%;
             left: 50%;
@@ -20,9 +27,15 @@
     </head>
 
     <body>
-      <div class="spinner-border text-primary" role="status">
+      <!-- <div class="spinner-border text-primary" role="status">
         <span class="visually-hidden">Loading...</span>
-      </div>
+      </div> -->
+      <l-bouncy
+        size="45"
+        speed="1.75"
+        color="black" 
+      ></l-bouncy>
+      
     </body>
 
 
@@ -33,6 +46,10 @@
         //     $('#footer').load("/header-footer/footer.html")
         // });
     </script>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+
+
     
     
 </html>
