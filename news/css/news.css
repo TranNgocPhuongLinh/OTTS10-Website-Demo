@@ -29,3 +29,33 @@ body{
     color: blue;
     text-decoration: underline;
 }
+
+@media (min-width: 992px){
+    
+}
+
+  @media (min-width: 768px) and (max-width: 992px){
+        #news .card{
+            margin: 0 auto;
+        }
+
+        #news{
+            margin-top: 60px;
+        }
+        #news.news-collapsed{
+            margin-top: 10px;
+        }
+
+  }
+
+  @media (min-width: 576px) and (max-width: 768px){
+    #news .card{
+        margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 576px) {
+    #news .card{
+        margin: 5px auto;
+    }
+  }

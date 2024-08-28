@@ -21,19 +21,19 @@
                         <div class="col-lg-12" id="news">
                             <h2>TIN TỨC</h2>
                             <div class="row" style="margin: 0; padding: 0;">
-                                <div class="card col-lg-3" style="width: 18rem;">
+                                <div class="card col-lg-3 col-md-2 col-sm-1" style="width: 18rem;">
                                     <a href="danh-sach-diem-chuan-10-2024.html"><img src="../assets/img/news/diem-chuan-2024/DS-Trung-tuyen-1.webp" height="200px" class="card-img-top" alt="Điểm chuẩn lớp 10 TPHCM năm 2024"></a>
                                     <div class="card-body">
                                         <p class="card-title"><a href="danh-sach-diem-chuan-10-2024.html">Điểm chuẩn lớp 10 ở TP.HCM năm 2024</a></p>
                                     </div>
                                 </div>
     
-                                <!-- <div class="card col-lg-3" style="width: 18rem;">
-                                    <a href="danh-sach-diem-chuan-10-2024.html"><img src="../assets/img/news/diem-chuan-2024/DS-Trung-tuyen-1.webp" height="200px" class="card-img-top" alt="Điểm chuẩn lớp 10 TPHCM năm 2024"></a>
+                                <div class="card col-lg-3 col-md-2 col-sm-1" style="width: 18rem;">
+                                    <a href="danh-sach-diem-chuan-10-2024.html"><img src="..." height="200px" class="card-img-top" alt="No image"></a>
                                     <div class="card-body">
-                                        <p class="card-title"><a href="danh-sach-diem-chuan-10-2024.html">Điểm chuẩn lớp 10 ở TP.HCM năm 2024</a></p>
+                                        <p class="card-title"><a href="HS-TPHCM-tuu-truong-nh-2024-2025.html">Học sinh TPHCM tựu trường năm học 2024-2025</a></p>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     
@@ -59,21 +59,18 @@
             $('#loading').load('../html/loading.html')
 
             $(document).ajaxStart(function() {
-                $("#content").addClass("hide-content");
+                document.getElementById("content").style.display = "none";
                 $("#loading").show();
             });
 
             $(document).ajaxComplete(function() {
                 setTimeout(function() {
                     $("#loading").hide();
-                    $("#content").removeClass("hide-content");
+                    document.getElementById("content").style.display = "block";
                 }, 2000);
             });
 
-            $('a').on('click', function() {
-                $("#content").addClass("hide-content");
-                $("#loading").show();
-            });
+            
         });
     </script>
 
